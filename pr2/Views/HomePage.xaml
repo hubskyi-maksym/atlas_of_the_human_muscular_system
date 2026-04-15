@@ -2,7 +2,58 @@
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       Title="HomePage">
-    <Grid Background="#FAFAFA">
-        <TextBlock Text="Головна сторінка: Атлас" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="0,0,0,20">
+            <TextBlock Text="Каталог м'язів" FontSize="28" FontWeight="SemiBold" Foreground="#212529"/>
+            <TextBlock Text="Оберіть групу м'язів для детального вивчення" FontSize="14" Foreground="#6C757D" Margin="0,5,0,0"/>
+        </StackPanel>
+
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" BorderThickness="0">
+            <WrapPanel Margin="-10">
+
+                <Border Background="White" Width="220" Height="150" Margin="10" Padding="15" 
+                        BorderBrush="#DEE2E6" BorderThickness="1" CornerRadius="8">
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="М'язи голови та шиї" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" Foreground="#0D6EFD"/>
+                        <TextBlock Text="Мімічні, жувальні, поверхневі та глибокі м'язи шиї." 
+                                   TextWrapping="Wrap" TextAlignment="Center" Margin="0,10,0,0" Foreground="#495057" FontSize="13"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Background="White" Width="220" Height="150" Margin="10" Padding="15" 
+                        BorderBrush="#DEE2E6" BorderThickness="1" CornerRadius="8">
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="М'язи тулуба" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" Foreground="#0D6EFD"/>
+                        <TextBlock Text="Грудні м'язи, м'язи живота (прес) та м'язи спини." 
+                                   TextWrapping="Wrap" TextAlignment="Center" Margin="0,10,0,0" Foreground="#495057" FontSize="13"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Background="White" Width="220" Height="150" Margin="10" Padding="15" 
+                        BorderBrush="#DEE2E6" BorderThickness="1" CornerRadius="8">
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="Верхні кінцівки" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" Foreground="#0D6EFD"/>
+                        <TextBlock Text="Дельтоподібний, біцепс, трицепс, м'язи передпліччя." 
+                                   TextWrapping="Wrap" TextAlignment="Center" Margin="0,10,0,0" Foreground="#495057" FontSize="13"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Background="White" Width="220" Height="150" Margin="10" Padding="15" 
+                        BorderBrush="#DEE2E6" BorderThickness="1" CornerRadius="8">
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="Нижні кінцівки" FontWeight="Bold" FontSize="16" HorizontalAlignment="Center" Foreground="#0D6EFD"/>
+                        <TextBlock Text="Сідничні м'язи, квадрицепс, литкові м'язи." 
+                                   TextWrapping="Wrap" TextAlignment="Center" Margin="0,10,0,0" Foreground="#495057" FontSize="13"/>
+                    </StackPanel>
+                </Border>
+
+            </WrapPanel>
+        </ScrollViewer>
     </Grid>
 </Page>

@@ -1,16 +1,40 @@
 ﻿<Window x:Class="pr2.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Інтерактивний атлас м'язової системи" Height="600" Width="900">
-    <DockPanel>
-        <Border DockPanel.Dock="Top" Background="#2C3E50" Padding="10">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button Content="Головна" Padding="15,5" Margin="5,0" Click="NavHome_Click"/>
-                <Button Content="Список" Padding="15,5" Margin="5,0" Click="NavList_Click"/>
-                <Button Content="Налаштування" Padding="15,5" Margin="5,0" Click="NavSettings_Click"/>
-            </StackPanel>
+        Title="Інтерактивний атлас м'язової системи" 
+        Height="650" Width="1000" MinHeight="500" MinWidth="800">
+
+    <Grid Background="#F8F9FA">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Background="#2C3E50" Padding="15,10">
+            <DockPanel LastChildFill="False">
+                <StackPanel DockPanel.Dock="Left" Orientation="Horizontal" VerticalAlignment="Center">
+                    <TextBlock Text="💪" FontSize="24" Margin="0,0,10,0"/>
+                    <TextBlock Text="М'язова Система" Foreground="White" FontSize="20" FontWeight="Bold"/>
+                </StackPanel>
+
+                <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
+                    <Button Content="Головна" Padding="20,8" Margin="5,0" Click="NavHome_Click" 
+                            Background="#34495E" Foreground="White" BorderThickness="0" Cursor="Hand"/>
+                    <Button Content="Список" Padding="20,8" Margin="5,0" Click="NavList_Click" 
+                            Background="#34495E" Foreground="White" BorderThickness="0" Cursor="Hand"/>
+                    <Button Content="Налаштування" Padding="20,8" Margin="5,0" Click="NavSettings_Click" 
+                            Background="#34495E" Foreground="White" BorderThickness="0" Cursor="Hand"/>
+                </StackPanel>
+            </DockPanel>
         </Border>
 
-        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" />
-    </DockPanel>
+        <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden" />
+
+        <StatusBar Grid.Row="2" Background="#E9ECEF" Padding="10,5">
+            <TextBlock Text="Головне меню завантажено" Foreground="#6C757D" FontSize="12"/>
+            <Separator/>
+            <TextBlock Text="Масштаб: 100%" Foreground="#6C757D" FontSize="12"/>
+        </StatusBar>
+    </Grid>
 </Window>
