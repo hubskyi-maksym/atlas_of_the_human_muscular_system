@@ -1,12 +1,51 @@
 ﻿<Window x:Class="pr2.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:pr2"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Інтерактивний атлас м'язової системи" 
+        Height="600" Width="900" 
+        MinHeight="450" MinWidth="700">
+
+    <DockPanel Background="White">
+        <Border DockPanel.Dock="Top" Background="#2C3E50" Padding="10">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="М'язова система" Foreground="White" FontSize="20" FontWeight="Bold" Margin="0,0,30,0" VerticalAlignment="Center"/>
+                <Button Content="Атлас" Background="#34495E" Foreground="White" BorderThickness="0" Padding="15,5" Margin="5,0"/>
+                <Button Content="Тести" Background="#34495E" Foreground="White" BorderThickness="0" Padding="15,5" Margin="5,0"/>
+                <Button Content="Довідник" Background="#34495E" Foreground="White" BorderThickness="0" Padding="15,5" Margin="5,0"/>
+            </StackPanel>
+        </Border>
+
+        <StatusBar DockPanel.Dock="Bottom" Background="#ECF0F1">
+            <TextBlock Name="StatusText" Text="Готово до роботи" Margin="5,0"/>
+        </StatusBar>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0" Background="#F8F9F9" Padding="15">
+                <StackPanel>
+                    <TextBlock Text="Пошук м'яза" FontSize="16" FontWeight="SemiBold" Margin="0,0,0,15"/>
+
+                    <Label Content="Назва м'яза:" Padding="0,0,0,5"/>
+                    <TextBox Name="TxtMuscleName" Padding="5" Margin="0,0,0,10"/>
+
+                    <Label Content="Група м'язів:" Padding="0,0,0,5"/>
+                    <TextBox Name="TxtMuscleGroup" Padding="5" Margin="0,0,0,20"/>
+
+                    <Button Name="BtnSearch" Content="Знайти" Padding="10" Background="#3498DB" Foreground="White" Click="BtnSearch_Click" Margin="0,0,0,10"/>
+                    <Button Name="BtnClear" Content="Очистити поля" Padding="10" Click="BtnClear_Click"/>
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Column="1" BorderBrush="#BDC3C7" BorderThickness="1" Margin="10" Background="#FAFAFA">
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <TextBlock Text="[Тут буде графічна схема тіла людини]" Foreground="#7F8C8D" FontSize="18" Margin="0,0,0,20" HorizontalAlignment="Center"/>
+                    <Button Name="BtnDetails" Content="Переглянути деталі м'яза" Padding="15,10" FontSize="14" Click="BtnDetails_Click"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </DockPanel>
 </Window>
