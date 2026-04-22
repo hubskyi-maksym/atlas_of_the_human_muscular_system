@@ -4,37 +4,36 @@
         Title="Інтерактивний атлас м'язової системи" 
         Height="650" Width="1000" MinHeight="500" MinWidth="800">
 
-    <Grid Background="#F8F9FA">
+    <Grid Background="{DynamicResource AppBgBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <Border Grid.Row="0" Background="#2C3E50" Padding="15,10">
+        <Border Grid.Row="0" Background="{DynamicResource MenuBgBrush}" Padding="15,10">
             <DockPanel LastChildFill="False">
                 <StackPanel DockPanel.Dock="Left" Orientation="Horizontal" VerticalAlignment="Center">
-                    <TextBlock Text="💪" FontSize="24" Margin="0,0,10,0"/>
-                    <TextBlock Text="М'язова Система" Foreground="White" FontSize="20" FontWeight="Bold"/>
+                    <TextBlock Text="💪" FontSize="24" Margin="0,0,10,0"
+                               Foreground="{DynamicResource HeaderTitleBrush}"/>
+                    <TextBlock Text="М'язова Система" FontSize="20" FontWeight="Bold"
+                               Foreground="{DynamicResource HeaderTitleBrush}"/>
                 </StackPanel>
 
                 <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
-                    <Button Content="Головна" Padding="20,8" Margin="5,0" Click="NavHome_Click" 
-                            Background="#34495E" Foreground="White" BorderThickness="0" Cursor="Hand"/>
-                    <Button Content="Список" Padding="20,8" Margin="5,0" Click="NavList_Click" 
-                            Background="#34495E" Foreground="White" BorderThickness="0" Cursor="Hand"/>
-                    <Button Content="Налаштування" Padding="20,8" Margin="5,0" Click="NavSettings_Click" 
-                            Background="#34495E" Foreground="White" BorderThickness="0" Cursor="Hand"/>
+                    <Button Content="Головна" Style="{StaticResource MenuButton}" Click="NavHome_Click"/>
+                    <Button Content="Список" Style="{StaticResource MenuButton}" Click="NavList_Click"/>
+                    <Button Content="Налаштування" Style="{StaticResource MenuButton}" Click="NavSettings_Click"/>
                 </StackPanel>
             </DockPanel>
         </Border>
 
         <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden" />
 
-        <StatusBar Grid.Row="2" Background="#E9ECEF" Padding="10,5">
-            <TextBlock Text="Головне меню завантажено" Foreground="#6C757D" FontSize="12"/>
-            <Separator/>
-            <TextBlock Text="Масштаб: 100%" Foreground="#6C757D" FontSize="12"/>
+        <StatusBar Grid.Row="2" Background="{DynamicResource StatusBarBgBrush}" Padding="10,5" BorderThickness="0,1,0,0" BorderBrush="#333333">
+            <TextBlock Text="Головне меню завантажено" Foreground="{DynamicResource TextMutedBrush}" FontSize="12"/>
+            <Separator Background="{DynamicResource TextMutedBrush}" Margin="5,0"/>
+            <TextBlock Text="Масштаб: 100%" Foreground="{DynamicResource TextMutedBrush}" FontSize="12"/>
         </StatusBar>
     </Grid>
 </Window>

@@ -2,10 +2,24 @@
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       Title="SettingsPage">
-    <Grid Background="#FFF0F5">
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="Сторінка налаштувань / Деталей" FontSize="24" Margin="0,0,0,20"/>
-            <TextBlock x:Name="TxtParameter" Text="Параметр не передано" FontSize="18" Foreground="Red"/>
+    <Grid Margin="30">
+        <StackPanel>
+            <TextBlock Text="Налаштування інтерфейсу" Style="{DynamicResource HeaderTextStyle}"/>
+
+            <TextBlock Text="Оберіть тему оформлення:" Margin="0,0,0,10" FontSize="16"/>
+            <StackPanel Orientation="Horizontal">
+                <Button Margin="0,0,10,0" Click="SetLightTheme_Click" 
+                        Width="120" Height="40" Background="#E0E0E0" 
+                        BorderThickness="1" BorderBrush="#AAAAAA">
+                    <TextBlock Text="Світла тема" Foreground="Black"/>
+                </Button>
+
+                <Button Click="SetDarkTheme_Click" 
+                        Width="120" Height="40" Background="#333333" 
+                        BorderThickness="1" BorderBrush="#111111">
+                    <TextBlock Text="Темна тема" Foreground="White"/>
+                </Button>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Page>

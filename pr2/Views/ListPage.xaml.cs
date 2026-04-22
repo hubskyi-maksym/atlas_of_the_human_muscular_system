@@ -1,6 +1,5 @@
-﻿using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Navigation;
+﻿using System.Windows.Controls;
+using pr2.ViewModels;
 
 namespace pr2.Views
 {
@@ -9,13 +8,7 @@ namespace pr2.Views
         public ListPage()
         {
             InitializeComponent();
-        }
-
-        private void BtnPassData_Click(object sender, RoutedEventArgs e)
-        {
-            string myData = "Біцепс (Двоголовий м'яз плеча)";
-
-            NavigationService.Navigate(new SettingsPage(myData));
+            this.DataContext = new MainViewModel();
         }
     }
 }
