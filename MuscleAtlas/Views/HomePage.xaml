@@ -1,0 +1,48 @@
+﻿<Page x:Class="pr2.Views.HomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="HomePage">
+    <Grid Margin="30">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" MaxWidth="280"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0" CornerRadius="15" BorderThickness="0" BorderBrush="{DynamicResource PrimaryBrush}" ClipToBounds="True" VerticalAlignment="Top" Margin="0,0,30,0">
+            <Image Source="/Resources/mein1.png" Stretch="Uniform" MaxHeight="400"/>
+        </Border>
+
+        <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+                <TextBlock Text="Інтерактивний Анатомічний Атлас" 
+                       FontSize="34" FontWeight="Bold" Foreground="{DynamicResource PrimaryBrush}" Margin="0,0,0,5"/>
+                <TextBlock Text="Довідник м'язової системи людини" 
+                       FontSize="18" FontStyle="Italic" Foreground="{DynamicResource TextMutedBrush}" Margin="0,0,0,25"/>
+
+                <TextBlock Text="Про продукт" FontSize="22" FontWeight="SemiBold" Margin="0,0,0,10"/>
+
+                <TextBlock TextWrapping="Wrap" FontSize="16" LineHeight="26" Foreground="{DynamicResource TextMainBrush}" Margin="0,0,0,15">
+                Цей інтерактивний атлас є сучасним електронним довідником, присвяченим міології — науці про будову, розвиток та властивості м'язів. 
+                Програма розроблена з метою надання структурованої та зручної у використанні інформації про м'язову систему людини.
+                </TextBlock>
+
+                <TextBlock TextWrapping="Wrap" FontSize="16" LineHeight="26" Foreground="{DynamicResource TextMainBrush}" Margin="0,0,0,15">
+                У базі даних зібрана детальна інформація про ключові м'язи нашого тіла. Для кожного м'яза вказана його загальноприйнята назва, точний переклад латиною, 
+                анатомічна категорія (голова та шия, тулуб, верхні та нижні кінцівки) та розгорнутий опис його функцій. Це дозволяє користувачеві швидко 
+                знаходити потрібну структуру та розуміти її роль у біомеханіці рухів.
+                </TextBlock>
+
+                <TextBlock TextWrapping="Wrap" FontSize="16" LineHeight="26" Foreground="{DynamicResource TextMainBrush}" Margin="0,0,0,15">
+                Програма створена з фокусом на інтерактивність: користувач може не лише переглядати готову базу, але й взаємодіяти з нею. 
+                Вбудована система фільтрації дозволяє миттєво відсортувати м'язи за обраною зоною тіла, а функція редагування дає можливість 
+                додавати власні нотатки, уточнення до описів або змінювати існуючі дані, які надійно зберігаються у системі.
+                </TextBlock>
+
+                <TextBlock TextWrapping="Wrap" FontSize="16" LineHeight="26" Foreground="{DynamicResource TextMainBrush}">
+                Завдяки адаптивному дизайну та підтримці різних колірних тем, робота з атласом є комфортною за будь-яких умов освітлення. 
+                Продукт поєднує в собі надійність сучасних технологій зберігання даних та простоту навігації, роблячи вивчення анатомії доступнішим.
+                </TextBlock>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

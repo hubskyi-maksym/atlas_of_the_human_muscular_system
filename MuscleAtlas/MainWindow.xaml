@@ -22,7 +22,7 @@
 
                 <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
                     <Button Content="Головна" Style="{StaticResource MenuButton}" Click="NavHome_Click"/>
-                    <Button Content="Список" Style="{StaticResource MenuButton}" Click="NavList_Click"/>
+                    <Button Content="Список М'язів" Style="{StaticResource MenuButton}" Click="NavList_Click"/>
                     <Button Content="Налаштування" Style="{StaticResource MenuButton}" Click="NavSettings_Click"/>
                 </StackPanel>
             </DockPanel>

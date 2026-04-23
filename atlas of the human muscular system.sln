@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
 VisualStudioVersion = 18.2.11415.280
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "atlas of the human muscular system", "pr2\atlas of the human muscular system.csproj", "{E1231F97-16D8-4538-88DC-CD7475349B88}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "atlas of the human muscular system", "MuscleAtlas\atlas of the human muscular system.csproj", "{E1231F97-16D8-4538-88DC-CD7475349B88}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -14,4 +14,8 @@
 
     <SolidColorBrush x:Key="PrimaryBrush" Color="#0056B3" />
     <SolidColorBrush x:Key="StatusBarBgBrush" Color="#E9ECEF" />
+    
+    <SolidColorBrush x:Key="ComboBgBrush" Color="White"/>
+    <SolidColorBrush x:Key="ComboTextBrush" Color="Black"/>
+    <SolidColorBrush x:Key="AccentBorderBrush" Color="#007ACC"/>
 </ResourceDictionary>
