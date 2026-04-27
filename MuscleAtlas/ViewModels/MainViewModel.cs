@@ -1,4 +1,4 @@
-﻿using pr2.Models;
+﻿using MuscleAtlas.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -10,7 +10,7 @@ using System.Text.Json;
 using System.Windows;
 using System.Windows.Data;
 
-namespace pr2.ViewModels
+namespace MuscleAtlas.ViewModels
 {
     public class MainViewModel : INotifyPropertyChanged
     {

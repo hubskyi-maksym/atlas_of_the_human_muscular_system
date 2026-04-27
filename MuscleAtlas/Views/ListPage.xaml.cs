@@ -1,8 +1,8 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-using pr2.ViewModels;
+using MuscleAtlas.ViewModels;
 
-namespace pr2.Views
+namespace MuscleAtlas.Views
 {
     public partial class ListPage : Page
     {

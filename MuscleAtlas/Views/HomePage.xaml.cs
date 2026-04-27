@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace pr2.Views
+namespace MuscleAtlas.Views
 {
     /// <summary>
     /// Логика взаимодействия для HomePage.xaml

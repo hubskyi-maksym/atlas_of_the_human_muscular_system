@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace pr2.Views
+namespace MuscleAtlas.Views
 {
     public partial class SettingsPage : Page
     {

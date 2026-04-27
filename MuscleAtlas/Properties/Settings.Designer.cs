@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace pr2.Properties
+namespace MuscleAtlas.Properties
 {
 
 

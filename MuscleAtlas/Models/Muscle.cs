@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace pr2.Models
+namespace MuscleAtlas.Models
 {
     public class Muscle : INotifyPropertyChanged
     {

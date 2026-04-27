@@ -2,7 +2,7 @@
 using System.Windows;
 using System;
 
-namespace pr2
+namespace MuscleAtlas
 {
     public partial class App : Application
     {

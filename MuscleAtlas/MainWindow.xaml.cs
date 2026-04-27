@@ -1,7 +1,7 @@
 ﻿using System.Windows;
-using pr2.Views; 
+using MuscleAtlas.Views; 
 
-namespace pr2
+namespace MuscleAtlas
 {
     public partial class MainWindow : Window
     {
